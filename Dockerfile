@@ -9,6 +9,7 @@ RUN apk update update
 ENV PACKAGES="\
   git \
   gcc \
+  python2-dev \
   py-setuptools \
   ffmpeg"
   

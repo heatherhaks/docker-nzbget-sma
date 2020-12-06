@@ -10,19 +10,18 @@ RUN apk add --update py-pip
 RUN apk add py2-setuptools \
   git \
   ffmpeg
-RUN pip2 install --upgrade PIP
-RUN pip2 install requests
-RUN pip2 install requests[security]
-RUN pip2 install requests-cache
-RUN pip2 install babelfish
-RUN pip2 install 'guessit<2'
-RUN pip2 install 'subliminal<2'
-RUN pip2 uninstall -y stevedore
-RUN pip2 install stevedore==1.19.1
-RUN pip2 install qtfaststart
-RUN pip2 install gevent
-RUN pip2 install tmdbsimple
-RUN pip2 install mutagen
+RUN pip install requests
+RUN pip install requests[security]
+RUN pip install requests-cache
+RUN pip install babelfish
+RUN pip install 'guessit<2'
+RUN pip install 'subliminal<2'
+RUN pip uninstall -y stevedore
+RUN pip install stevedore==1.19.1
+RUN pip install qtfaststart
+RUN pip install gevent
+RUN pip install tmdbsimple
+RUN pip install mutagen
 RUN git clone git://github.com/mdhiggins/sickbeard_mp4_automator.git mp4automator
 
 #Set script file permissions

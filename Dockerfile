@@ -10,6 +10,7 @@ ENV PACKAGES="\
   git \
   gcc \
   musl-dev \
+  libffi-dev \
   python2-dev \
   python3-dev \
   py-setuptools \

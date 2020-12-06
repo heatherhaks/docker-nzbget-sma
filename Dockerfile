@@ -5,8 +5,8 @@ LABEL maintainer="halfdeadgames"
 RUN apk update update
 
 # Install MP4 Automator
-RUN apk add python-setuptools \
-  python-pip \
+RUN apk add py-setuptools \
+  py-pip \
   git \
   ffmpeg
 RUN pip install --upgrade PIP

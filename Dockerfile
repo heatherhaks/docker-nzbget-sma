@@ -6,8 +6,8 @@ RUN apk update update
 
 # Install MP4 Automator
 RUN apk add --no-cache python2
+RUN apk add --update py-pip
 RUN apk add py2-setuptools \
-  py2-pip \
   git \
   ffmpeg
 RUN pip2 install --upgrade PIP

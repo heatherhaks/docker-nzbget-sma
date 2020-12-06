@@ -8,10 +8,10 @@ RUN apk update update
 
 ENV PACKAGES="\
   git \
-  python2 \
-  python2-dev \
+  gcc \
   py-setuptools \
   ffmpeg"
+  
 RUN apk add --update py-pip
 RUN apk add --no-cache $PACKAGES
 RUN pip install requests

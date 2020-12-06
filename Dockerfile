@@ -2,10 +2,10 @@ FROM ghcr.io/linuxserver/nzbget
 LABEL maintainer="halfdeadgames"
 
 # Update package repositories
-RUN apt-get update
+RUN apk update update
 
 # Install MP4 Automator
-RUN apt-get install -y \
+RUN apk get install -y \
   python-setuptools \
   python-pip \
   git \

@@ -15,7 +15,8 @@ ENV PACKAGES="\
   python3-dev \
   py-setuptools \
   ffmpeg"
-  
+
+RUN apk del python3
 RUN apk add --update py-pip
 RUN apk add --no-cache $PACKAGES
 RUN pip install requests requests[security] requests-cache babelfish 'guessit<2' 'subliminal<2' 

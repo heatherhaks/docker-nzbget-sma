@@ -29,8 +29,9 @@ RUN git clone git://github.com/mdhiggins/sickbeard_mp4_automator.git mp4automato
 RUN chmod 775 -R /mp4automator
 
 #Move script to correct location
-
-RUN cp -f /mp4automator/NZBGetPostProcess.py /opt/nzbget/scripts/NZBGetPostProcess.py
+RUN mkdir /opt/nzbget
+RUN mkdir /opt/nzbget/scripts
+RUN cp /mp4automator/NZBGetPostProcess.py /opt/nzbget/scripts/NZBGetPostProcess.py
 
 #Adding Custom files
 ADD init/ /etc/cont-init.d/

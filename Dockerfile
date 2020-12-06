@@ -9,6 +9,7 @@ RUN apk update update
 ENV PACKAGES="\
   git \
   gcc \
+  musl-dev \
   python2-dev \
   python3-dev \
   py-setuptools \

@@ -10,23 +10,17 @@ ENV PACKAGES="\
   git \
   gcc \
   python2-dev \
+  python3-dev \
   py-setuptools \
   ffmpeg"
   
 RUN apk add --update py-pip
 RUN apk add --no-cache $PACKAGES
-RUN pip install requests
-RUN pip install requests[security]
-RUN pip install requests-cache
-RUN pip install babelfish
-RUN pip install 'guessit<2'
-RUN pip install 'subliminal<2'
+RUN pip install requests requests[security] requests-cache babelfish 'guessit<2' 'subliminal<2' 
 RUN pip uninstall -y stevedore
 RUN pip install stevedore==1.19.1
-RUN pip install qtfaststart
-RUN pip install gevent
-RUN pip install tmdbsimple
-RUN pip install mutagen
+RUN pip install qtfaststart gevent tmdbsimple mutagen
+
 RUN git clone git://github.com/mdhiggins/sickbeard_mp4_automator.git mp4automator
 
 #Set script file permissions

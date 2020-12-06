@@ -1,4 +1,4 @@
-FROM ghcr.io/linuxserver/qbittorrent
+FROM ghcr.io/linuxserver/nzbget
 LABEL maintainer="halfdeadgames"
 
 # Update package repositories

@@ -5,11 +5,15 @@ LABEL maintainer="halfdeadgames"
 RUN apk update update
 
 # Install MP4 Automator
-RUN apk add --no-cache python2
-RUN apk add --update py-pip
-RUN apk add py2-setuptools \
+
+ENV PACKAGES="\
   git \
-  ffmpeg
+  python2 \
+  python2-dev \
+  py-setuptools \
+  ffmpeg"
+RUN apk add --update py-pip
+RUN apk add --no-cache $PACKAGES
 RUN pip install requests
 RUN pip install requests[security]
 RUN pip install requests-cache

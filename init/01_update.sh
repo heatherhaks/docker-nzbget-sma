@@ -14,3 +14,5 @@ pip install --upgrade tmdbsimple
 pip install --upgrade mutagen
 pip uninstall --yes stevedore
 pip install stevedore==1.19.1
+
+cp /mp4automator/NZBGetPostProcess.py /opt/nzbget/scripts/

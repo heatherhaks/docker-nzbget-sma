@@ -23,6 +23,8 @@ RUN pip uninstall -y stevedore
 RUN pip install stevedore==1.19.1
 RUN pip install qtfaststart gevent tmdbsimple mutagen
 
+RUN mkdir /opt/nzbget
+RUN mkdir /opt/nzbget/scripts
 RUN cp /mp4automator/NZBGetPostProcess.py /opt/nzbget/scripts/
 #Adding Custom files
 ADD init/ /etc/cont-init.d/

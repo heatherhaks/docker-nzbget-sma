@@ -25,7 +25,7 @@ RUN pip install qtfaststart gevent tmdbsimple mutagen
 
 RUN mkdir /opt/nzbget
 RUN mkdir /opt/nzbget/scripts
-RUN cp /mp4automator/NZBGetPostProcess.py /opt/nzbget/scripts/
+RUN cp /mp4automator/NZBGetPostProcess.py /opt/nzbget/scripts/NZBGetPostProcess.py
 #Adding Custom files
 ADD init/ /etc/cont-init.d/
 RUN chmod -v +x /etc/cont-init.d/*.sh
